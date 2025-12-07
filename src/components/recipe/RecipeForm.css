@@ -2,7 +2,7 @@
   max-width: 70%;
   margin: 50px auto;
   padding: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f0f4f7;
@@ -18,13 +18,13 @@
 .recipe-form-label {
   margin-bottom: 5px;
   font-weight: bold;
-  color: #333;
+  color: var(--color-text);
 }
 
 .recipe-form-input {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   font-size: 16px;
 }
@@ -32,7 +32,7 @@
 .recipe-form-textarea {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   font-size: 16px;
   min-height: 80px;
@@ -41,15 +41,15 @@
 .recipe-form-select {
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   font-size: 16px;
 }
 
 .recipe-form-button {
   padding: 12px;
-  background-color: #fcce02be;
-  color: #333;
+  background-color: var(--color-primary);
+  color: var(--color-text);
   border: none;
   border-radius: 5px;
   font-size: 18px;
@@ -58,7 +58,7 @@
 }
 
 .recipe-form-button:hover {
-  background-color: #fcce02;
+  background-color: var(--color-primary-hover);
 }
 
 .recipe-form-title {
@@ -69,9 +69,14 @@
 .form-section {
   margin-bottom: 25px;
   padding: 15px;
-  background-color: #fff;
+  background-color: var(--color-background-white);
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--color-border-lighter);
+}
+
+.form-section p {
+  margin: 0;
+  padding: 0;
 }
 
 .input-group {
@@ -101,7 +106,7 @@
   border-bottom: 1px solid #eee;
   margin-bottom: 5px;
   border-radius: 4px;
-  color: #333;
+  color: var(--color-text);
 }
 
 .remove-button {
@@ -130,7 +135,7 @@
   position: relative;
   width: 100px;
   height: 100px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -149,4 +154,72 @@
   padding: 2px 5px;
   background-color: rgba(255, 0, 0, 0.8);
   font-size: 10px;
+}
+
+/* Labels Section */
+.label-helper-text {
+  color: var(--color-text-light);
+  font-size: 14px;
+  margin: 5px 0 15px 0;
+  font-weight: normal;
+}
+
+.labels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: var(--color-background-white);
+  margin: 0;
+}
+
+.label-checkbox:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.label-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.label-checkbox span {
+  font-size: 14px;
+  color: var(--color-text);
+  user-select: none;
+  font-weight: normal;
+}
+
+.selected-labels {
+  margin-top: 15px;
+  padding: 10px 12px;
+  background-color: var(--color-primary-light);
+  border-radius: 5px;
+  border-left: 3px solid var(--color-primary);
+  font-size: 14px;
+}
+
+.selected-labels strong {
+  color: var(--color-text);
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.selected-label-tag {
+  color: var(--color-text);
+  font-weight: 500;
 }

@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import "./RecipeForm.css";
+import defaultLabels from "../../data/availableLabels.json";
 
-function RecipeForm() {
+function RecipeForm({ availableLabels }) {
+  // TODO CALL BACKEND
+
+  const labels =
+    availableLabels && availableLabels.length > 0
+      ? availableLabels
+      : defaultLabels;
+
   const [formData, setFormData] = useState({
     title: "",
     summary: "",
@@ -37,6 +45,18 @@ function RecipeForm() {
       ...prevData,
       [field]: prevData[field].filter((_, i) => i !== index),
     }));
+  };
+
+  const handleLabelToggle = (label) => {
+    setFormData((prevData) => {
+      const isSelected = prevData.labels.includes(label);
+      return {
+        ...prevData,
+        labels: isSelected
+          ? prevData.labels.filter((l) => l !== label)
+          : [...prevData.labels, label],
+      };
+    });
   };
 
   const handleSubmit = (e) => {
@@ -206,6 +226,36 @@ function RecipeForm() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="form-section">
+          <label className="recipe-form-label">Labels:</label>
+          <p className="label-helper-text">
+            Select all categories that apply to this recipe
+          </p>
+          <div className="labels-grid">
+            {labels.map((label) => (
+              <label key={label} className="label-checkbox">
+                <input
+                  type="checkbox"
+                  checked={formData.labels.includes(label)}
+                  onChange={() => handleLabelToggle(label)}
+                />
+                <span>{label}</span>
+              </label>
+            ))}
+          </div>
+          {formData.labels.length > 0 && (
+            <div className="selected-labels">
+              <strong>Selected:</strong>{" "}
+              {formData.labels.map((label, index) => (
+                <span key={label} className="selected-label-tag">
+                  {label}
+                  {index < formData.labels.length - 1 && ", "}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         <button type="submit" className="recipe-form-button">

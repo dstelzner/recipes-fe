@@ -1,17 +1,38 @@
 :root {
+  /* Cores Primárias */
+  --color-primary: #fcce02;
+  --color-primary-hover: #fcce02be;
+  --color-primary-light: #fcce0220;
+
+  /* Cores de Texto */
+  --color-text: #333;
+  --color-text-light: #555;
+  --color-text-white: #fff;
+
+  /* Cores de Fundo */
+  --color-background: #faf8f4;
+  --color-background-white: #fff;
+  --color-background-light: #f0f0f0;
+  --color-background-gray: #e6ebee;
+
+  /* Cores de Borda */
+  --color-border: #ccc;
+  --color-border-light: #ddd;
+  --color-border-lighter: #e0e0e0;
+
   color: rgba(255, 255, 255, 0.87);
-  background-color: #faf8f4;
+  background-color: var(--color-background);
   font-family: "Poppins", sans-serif;
 }
 
 h2 {
   font-size: 28px;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text);
 }
 
 p {
-  color: #333;
+  color: var(--color-text);
 }
 
 body {

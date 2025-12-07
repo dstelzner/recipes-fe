@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import RecipeHeader from "../components/recipe/RecipeHeader";
+import Header from "../components/common/Header";
 import "./RecipeDetailPage.css";
 import Summary from "../components/recipe/Summary";
 import IngredientList from "../components/recipe/IngredientList";
@@ -12,9 +12,7 @@ function RecipeDetailPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 1. Lógica para buscar a receita por ID na API (fetch/axios)
-    // 2. setRecipe(dadosRecebidos);
-    // 3. setLoading(false);
+    // TODO CALL BACKEND
     setRecipe({
       id: "user-1",
       title: "Bolo de Chocolate",
@@ -50,7 +48,7 @@ function RecipeDetailPage() {
 
   return (
     <div className="recipe-detail-layout">
-      <RecipeHeader
+      <Header
         images={recipe.images}
         title={recipe.title}
         chefName={recipe.chef.name}

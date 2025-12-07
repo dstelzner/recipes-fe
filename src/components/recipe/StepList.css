@@ -3,7 +3,7 @@
 }
 
 .step-list h2 {
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .step-list p {
-  color: #333;
+  color: var(--color-text);
   font-size: 1rem;
   margin: 0;
 }

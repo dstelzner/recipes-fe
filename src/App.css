@@ -1,5 +1,5 @@
 .container {
-  background-color: #faf8f4;
+  background-color: var(--color-background);
   min-height: 100vh;
   padding-bottom: 2rem;
   padding-top: 55px;

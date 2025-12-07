@@ -7,13 +7,13 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: #fff;
+  background-color: var(--color-background-white);
   padding: 10px;
 }
 
 .searching-bar input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   font-size: 14px;
   width: 50%;
@@ -22,7 +22,7 @@
 .searching-bar h2 {
   margin-right: 15px;
   font-family: Chewy;
-  color: #fcce02;
+  color: var(--color-primary);
   font-size: 35px;
 }
 
@@ -32,7 +32,7 @@
   right: -300px;
   width: 300px;
   height: calc(100vh - 55px);
-  background-color: #fff;
+  background-color: var(--color-background-white);
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 99;
@@ -50,7 +50,7 @@
 }
 
 .menu-nav a {
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   padding: 1rem;
   border-radius: 5px;
@@ -59,7 +59,7 @@
 }
 
 .menu-nav a:hover {
-  background-color: #fcce0220;
+  background-color: var(--color-primary-light);
 }
 
 /* Overlay */
