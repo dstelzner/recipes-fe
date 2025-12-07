@@ -1,0 +1,23 @@
+.step-list {
+  margin: 2rem 0;
+}
+
+.step-list h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.step-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.step-list li {
+  margin-bottom: 0.5rem;
+}
+
+.step-list p {
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+}

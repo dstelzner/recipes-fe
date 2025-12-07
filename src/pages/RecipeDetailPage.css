@@ -1,0 +1,10 @@
+.recipe-detail-layout {
+  max-width: 70%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.content-columns {
+  padding: 10px;
+}
